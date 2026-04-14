@@ -26,11 +26,38 @@ import { site } from '../data/content';
   <Switcher current="c" />
 
   <div class="page">
-    <nav class="palette-selector" aria-label="Sélecteur de palette">
-      <span class="sel-k">Palette :</span>
-      <button type="button" data-pal="c1">01 · Océan électrique</button>
-      <button type="button" data-pal="c2">02 · Sous-bois</button>
-      <button type="button" data-pal="c3">03 · Crépuscule</button>
+    <nav class="palette-selector" aria-label="Choisir une palette de couleurs">
+      <span class="sel-k">Palette</span>
+      <button type="button" data-pal="c1" aria-label="Palette Océan électrique">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
+          <span style="background:#0a0a0a"></span>
+          <span style="background:#0891b2"></span>
+          <span style="background:#ef4444"></span>
+          <span style="background:#6b6b6b"></span>
+        </span>
+        <span class="pal-label">Océan</span>
+      </button>
+      <button type="button" data-pal="c2" aria-label="Palette Sous-bois">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
+          <span style="background:#141414"></span>
+          <span style="background:#047857"></span>
+          <span style="background:#c2410c"></span>
+          <span style="background:#6b6b6b"></span>
+        </span>
+        <span class="pal-label">Sous-bois</span>
+      </button>
+      <button type="button" data-pal="c3" aria-label="Palette Crépuscule">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#fafaf7;outline:1px solid #e8e4d9;outline-offset:-1px"></span>
+          <span style="background:#0a0a0a"></span>
+          <span style="background:#7c3aed"></span>
+          <span style="background:#d97706"></span>
+          <span style="background:#737373"></span>
+        </span>
+        <span class="pal-label">Crépuscule</span>
+      </button>
     </nav>
 
     <header class="masthead">
@@ -354,39 +381,70 @@ import { site } from '../data/content';
       padding: 0 clamp(1.25rem, 4vw, 2.5rem);
     }
 
-    /* Palette selector */
+    /* Palette selector — sticky, chips de couleur visibles */
     .palette-selector {
+      position: sticky;
+      top: 2.25rem;
+      z-index: 90;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 0 1rem;
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--muted);
+      gap: 0.65rem;
+      padding: 0.85rem 0;
+      margin: 0 calc(clamp(1.25rem, 4vw, 2.5rem) * -1);
+      padding-left: clamp(1.25rem, 4vw, 2.5rem);
+      padding-right: clamp(1.25rem, 4vw, 2.5rem);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
     .palette-selector .sel-k {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       color: var(--muted);
-      margin-right: 0.5rem;
+      margin-right: 0.25rem;
     }
     .palette-selector button {
-      font: inherit;
-      padding: 0.5rem 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.4rem 0.75rem 0.4rem 0.5rem;
       background: transparent;
-      color: var(--muted);
       border: 1px solid var(--border);
       cursor: pointer;
       transition: all 180ms;
+      font-family: inherit;
     }
     .palette-selector button:hover {
-      color: var(--fg);
       border-color: var(--fg);
+      transform: translateY(-1px);
     }
     .palette-selector button.active {
-      background: var(--fg);
-      color: var(--bg);
       border-color: var(--fg);
+      background: color-mix(in srgb, var(--fg) 4%, var(--bg));
+    }
+    .pal-chips {
+      display: inline-flex;
+      gap: 0;
+    }
+    .pal-chips span {
+      display: block;
+      width: 16px;
+      height: 18px;
+    }
+    .pal-label {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--fg);
+      font-weight: 500;
+      line-height: 1;
+    }
+    @media (max-width: 640px) {
+      .palette-selector { gap: 0.4rem; padding: 0.65rem clamp(1.25rem, 4vw, 2.5rem); }
+      .palette-selector .sel-k { width: 100%; margin-bottom: 0.25rem; }
     }
 
     .masthead {
