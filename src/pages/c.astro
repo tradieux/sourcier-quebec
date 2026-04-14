@@ -9,7 +9,7 @@ import { site } from '../data/content';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap"
     />
   </Fragment>
 
@@ -23,8 +23,8 @@ import { site } from '../data/content';
 
     <section class="hero" id="hero">
       <h1>
-        L'expertise de l'eau<br />
-        au service de votre terrain.
+        L'<em>expertise</em> de l'eau<br />
+        au service de <em>votre terrain.</em>
       </h1>
       <p class="lede">{site.hero.accroche}</p>
       <div class="actions">
@@ -36,7 +36,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="piliers" id="piliers">
-      <h2>Trois piliers<br />de la démarche.</h2>
+      <h2>Trois piliers<br />de la <em>démarche</em>.</h2>
       <div class="grid3">
         {site.piliers.map((p) => (
           <article>
@@ -51,7 +51,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="about" id="about">
-      <h2>À propos.</h2>
+      <h2>À <em>propos</em>.</h2>
       <div class="about-grid">
         <div class="lead">
           <p>{site.about.intro}</p>
@@ -74,7 +74,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="forfaits" id="forfaits">
-      <h2>Forfaits.</h2>
+      <h2><em>Forfaits.</em></h2>
       <ol class="forfaits-list">
         {site.forfaits.map((f) => (
           <li>
@@ -98,7 +98,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="zone" id="zone">
-      <h2>Zone d'intervention.</h2>
+      <h2>Zone d'<em>intervention</em>.</h2>
       <div class="grid3 zone-grid">
         <div>
           <p class="key">Base</p>
@@ -121,7 +121,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="faq" id="faq">
-      <h2>Questions fréquentes.</h2>
+      <h2>Questions <em>fréquentes</em>.</h2>
       <div class="faq-list">
         {site.faq.map((item, i) => (
           <details open={i === 0}>
@@ -138,7 +138,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="temoignages" id="temoignages">
-      <h2>Témoignages.</h2>
+      <h2><em>Témoignages.</em></h2>
       <p class="intro">{site.temoignages.intro}</p>
       <div class="t-list">
         {site.temoignages.placeholders.map((t) => (
@@ -153,7 +153,7 @@ import { site } from '../data/content';
     <hr />
 
     <section class="contact" id="contact">
-      <h2>Contact.</h2>
+      <h2><em>Contact.</em></h2>
       <div class="contact-grid">
         <form class="form" method="post" action="#">
           <label><span>Nom</span><input type="text" name="nom" required /></label>
@@ -245,32 +245,46 @@ import { site } from '../data/content';
       letter-spacing: -0.005em;
       border-bottom: 1px solid #e5e5e5;
     }
-    section {
-      padding: clamp(4.5rem, 9vh, 7rem) 0;
-    }
+    section { padding: clamp(4.5rem, 9vh, 7rem) 0; }
     hr {
       border: none;
       border-top: 1px solid #e5e5e5;
       margin: 0;
     }
+
+    /* Titres — Fraunces colorée, optical sizing activée */
+    h1, h2, h3 {
+      font-family: 'Fraunces', 'Crimson Pro', Georgia, serif;
+      font-optical-sizing: auto;
+      font-variation-settings: 'SOFT' 50, 'WONK' 0;
+      color: #1e40af;
+    }
     h1 {
-      font-size: clamp(2.8rem, 6.8vw, 5rem);
+      font-size: clamp(3rem, 7.5vw, 5.4rem);
       font-weight: 500;
-      letter-spacing: -0.035em;
-      line-height: 1;
+      letter-spacing: -0.03em;
+      line-height: 0.98;
       margin: 0 0 2rem;
-      max-width: 16ch;
+      max-width: 15ch;
+    }
+    h1 em {
+      font-style: italic;
+      font-variation-settings: 'SOFT' 100, 'WONK' 1;
     }
     h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
       font-weight: 500;
-      letter-spacing: -0.028em;
-      line-height: 1.05;
+      letter-spacing: -0.025em;
+      line-height: 1.02;
       margin: 0 0 3rem;
       max-width: 16ch;
     }
+    h2 em {
+      font-style: italic;
+      font-variation-settings: 'SOFT' 100, 'WONK' 1;
+    }
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 500;
       letter-spacing: -0.01em;
       margin: 0;
@@ -303,7 +317,7 @@ import { site } from '../data/content';
       letter-spacing: -0.005em;
       transition: background 180ms;
     }
-    .btn:hover { background: #3b3b3b; }
+    .btn:hover { background: #1e40af; }
     .link {
       display: inline-flex;
       align-items: center;
@@ -315,7 +329,7 @@ import { site } from '../data/content';
       border-bottom: 1px solid #0a0a0a;
       padding-bottom: 2px;
     }
-    .link:hover { color: #6b6b6b; border-color: #6b6b6b; }
+    .link:hover { color: #1e40af; border-color: #1e40af; }
 
     /* Grid 3 colonnes */
     .grid3 {
@@ -327,21 +341,21 @@ import { site } from '../data/content';
     /* Piliers */
     .piliers article .num {
       display: block;
-      font-size: 0.75rem;
+      font-family: 'Fraunces', serif;
+      font-size: 0.88rem;
       font-weight: 500;
-      color: #9b9b9b;
+      font-style: italic;
+      color: #1e40af;
       margin-bottom: 1rem;
       letter-spacing: 0;
     }
-    .piliers article h3 {
-      margin: 0 0 0.75rem;
-      font-size: 1.35rem;
-    }
+    .piliers article h3 { margin: 0 0 0.75rem; font-size: 1.4rem; }
     .piliers article p {
       margin: 0;
       font-size: 0.98rem;
       line-height: 1.6;
       color: #4b4b4b;
+      font-family: 'Inter', sans-serif;
     }
 
     /* About */
@@ -351,9 +365,11 @@ import { site } from '../data/content';
       gap: 3rem;
     }
     .about-grid .lead p {
-      font-size: 1.3rem;
-      line-height: 1.5;
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      line-height: 1.4;
       font-weight: 500;
+      font-style: italic;
       margin: 0;
       letter-spacing: -0.015em;
       color: #0a0a0a;
@@ -375,10 +391,12 @@ import { site } from '../data/content';
       border-top: 1px solid #e5e5e5;
     }
     .pt-title {
-      font-size: 0.82rem;
-      font-weight: 500;
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-style: italic;
       margin: 0 0 0.5rem;
-      color: #0a0a0a;
+      color: #1e40af;
     }
     .pt-text {
       margin: 0;
@@ -388,11 +406,7 @@ import { site } from '../data/content';
     }
 
     /* Forfaits */
-    .forfaits-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+    .forfaits-list { list-style: none; margin: 0; padding: 0; }
     .forfaits-list > li {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -401,11 +415,9 @@ import { site } from '../data/content';
       border-top: 1px solid #e5e5e5;
       align-items: start;
     }
-    .forfaits-list > li:last-child {
-      border-bottom: 1px solid #e5e5e5;
-    }
+    .forfaits-list > li:last-child { border-bottom: 1px solid #e5e5e5; }
     .forfait-main h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin: 0 0 0.35rem;
     }
     .f-surface {
@@ -434,24 +446,27 @@ import { site } from '../data/content';
       color: #9b9b9b;
     }
     .forfait-price {
+      font-family: 'Fraunces', serif;
       display: flex;
       align-items: baseline;
       font-weight: 500;
       letter-spacing: -0.04em;
-      color: #0a0a0a;
+      color: #1e40af;
       line-height: 0.9;
     }
     .price-n {
-      font-size: clamp(3rem, 5vw, 4rem);
+      font-size: clamp(3.2rem, 5.5vw, 4.4rem);
+      font-variation-settings: 'SOFT' 30;
     }
     .price-u {
       font-size: 1rem;
-      margin-left: 0.25rem;
+      margin-left: 0.3rem;
       color: #6b6b6b;
       letter-spacing: 0;
       font-weight: 500;
       align-self: flex-start;
       padding-top: 0.5rem;
+      font-family: 'Inter', sans-serif;
     }
     .note {
       margin-top: 1.5rem;
@@ -461,10 +476,13 @@ import { site } from '../data/content';
 
     /* Zone */
     .zone-grid .key,
-    .contact .key {
-      font-size: 0.78rem;
+    .contact .key,
+    .coords .group .key {
+      font-family: 'Fraunces', serif;
+      font-size: 0.92rem;
       font-weight: 500;
-      color: #9b9b9b;
+      font-style: italic;
+      color: #1e40af;
       margin: 0 0 0.6rem;
     }
     .zone-grid .val {
@@ -473,10 +491,7 @@ import { site } from '../data/content';
       line-height: 1.55;
       color: #0a0a0a;
     }
-    .zone-grid .val b {
-      color: #0a0a0a;
-      font-weight: 500;
-    }
+    .zone-grid .val b { color: #0a0a0a; font-weight: 500; }
     .zone-grid .val.muted {
       color: #9b9b9b;
       font-size: 0.85rem;
@@ -488,23 +503,24 @@ import { site } from '../data/content';
       padding: 1.6rem 0;
       border-top: 1px solid #e5e5e5;
     }
-    .faq-list details:last-child {
-      border-bottom: 1px solid #e5e5e5;
-    }
+    .faq-list details:last-child { border-bottom: 1px solid #e5e5e5; }
     .faq-list summary {
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
-      font-size: 1.08rem;
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
       font-weight: 500;
       list-style: none;
       gap: 1rem;
+      color: #0a0a0a;
     }
     .faq-list summary::-webkit-details-marker { display: none; }
     .toggle {
+      font-family: 'Inter', sans-serif;
       font-size: 1.4rem;
-      color: #9b9b9b;
+      color: #1e40af;
       font-weight: 300;
       line-height: 0.8;
       flex-shrink: 0;
@@ -516,6 +532,7 @@ import { site } from '../data/content';
       color: #4b4b4b;
       max-width: 72ch;
       font-size: 0.98rem;
+      font-family: 'Inter', sans-serif;
     }
 
     /* Témoignages */
@@ -534,15 +551,15 @@ import { site } from '../data/content';
       gap: 2rem;
       align-items: start;
     }
-    .t-list figure:last-child {
-      border-bottom: 1px solid #e5e5e5;
-    }
+    .t-list figure:last-child { border-bottom: 1px solid #e5e5e5; }
     .t-list blockquote {
+      font-family: 'Fraunces', serif;
       margin: 0;
-      font-size: 1.2rem;
-      line-height: 1.5;
+      font-size: 1.35rem;
+      line-height: 1.45;
       max-width: 55ch;
       font-weight: 400;
+      font-style: italic;
       letter-spacing: -0.01em;
       color: #0a0a0a;
     }
@@ -572,12 +589,14 @@ import { site } from '../data/content';
     }
     .form label.full { grid-column: 1 / -1; }
     .form label > span {
-      font-size: 0.78rem;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.92rem;
       font-weight: 500;
-      color: #0a0a0a;
+      color: #1e40af;
     }
     .form input, .form select, .form textarea {
-      font-family: inherit;
+      font-family: 'Inter', sans-serif;
       font-size: 1rem;
       padding: 0.75rem 0;
       background: transparent;
@@ -589,12 +608,13 @@ import { site } from '../data/content';
     .form textarea { resize: vertical; }
     .form input:focus, .form select:focus, .form textarea:focus {
       outline: none;
-      border-bottom-color: #6b6b6b;
+      border-bottom-color: #1e40af;
+      border-bottom-width: 2px;
     }
     .form button {
       grid-column: 1 / -1;
       justify-self: start;
-      font-family: inherit;
+      font-family: 'Inter', sans-serif;
       font-size: 0.88rem;
       font-weight: 500;
       padding: 1rem 1.75rem;
@@ -605,17 +625,11 @@ import { site } from '../data/content';
       margin-top: 0.75rem;
       transition: background 180ms;
     }
-    .form button:hover { background: #3b3b3b; }
+    .form button:hover { background: #1e40af; }
     .coords {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-    }
-    .coords .group .key {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #9b9b9b;
-      margin: 0 0 0.4rem;
     }
     .coords .group .val {
       margin: 0;
@@ -623,16 +637,13 @@ import { site } from '../data/content';
       line-height: 1.5;
       color: #0a0a0a;
     }
-    .coords .val.muted {
-      color: #6b6b6b;
-      font-size: 0.9rem;
-    }
+    .coords .val.muted { color: #6b6b6b; font-size: 0.9rem; }
     .coords a {
       color: #0a0a0a;
       text-decoration: none;
       border-bottom: 1px solid #0a0a0a;
     }
-    .coords a:hover { color: #6b6b6b; border-color: #6b6b6b; }
+    .coords a:hover { color: #1e40af; border-color: #1e40af; }
 
     /* Footer */
     .footer {
@@ -647,33 +658,35 @@ import { site } from '../data/content';
       margin-bottom: 3rem;
     }
     .f-brand {
-      font-size: 1.15rem;
+      font-family: 'Fraunces', serif;
+      font-size: 1.35rem;
       font-weight: 500;
+      font-style: italic;
       margin: 0 0 0.25rem;
+      color: #1e40af;
       letter-spacing: -0.01em;
     }
-    .f-muted {
-      font-size: 0.88rem;
-      color: #6b6b6b;
-      margin: 0;
-    }
+    .f-muted { font-size: 0.88rem; color: #6b6b6b; margin: 0; }
     .f-col .f-key {
-      font-size: 0.75rem;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.92rem;
       font-weight: 500;
       margin: 0 0 0.75rem;
-      color: #9b9b9b;
+      color: #1e40af;
     }
     .f-col p {
       margin: 0 0 0.4rem;
       font-size: 0.92rem;
       color: #0a0a0a;
+      font-family: 'Inter', sans-serif;
     }
     .f-col a {
       color: #0a0a0a;
       text-decoration: none;
       border-bottom: 1px solid transparent;
     }
-    .f-col a:hover { border-color: #0a0a0a; }
+    .f-col a:hover { border-color: #1e40af; color: #1e40af; }
     .clause-wrap {
       padding: 2rem 0;
       border-top: 1px solid #e5e5e5;
@@ -681,10 +694,12 @@ import { site } from '../data/content';
       margin-bottom: 1.5rem;
     }
     .clause-wrap .f-key {
-      font-size: 0.75rem;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.92rem;
       font-weight: 500;
       margin: 0 0 0.75rem;
-      color: #9b9b9b;
+      color: #1e40af;
     }
     .clause-wrap .clause {
       margin: 0;
