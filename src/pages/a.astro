@@ -28,17 +28,7 @@ import { site } from '../data/content';
   <div class="page">
     <nav class="palette-selector" aria-label="Choisir une palette de couleurs">
       <span class="sel-k">Palette</span>
-      <button type="button" data-pal="a1" aria-label="Palette Forêt">
-        <span class="pal-chips" aria-hidden="true">
-          <span style="background:#eae2c8"></span>
-          <span style="background:#1a241c"></span>
-          <span style="background:#4d6149"></span>
-          <span style="background:#8b9577"></span>
-          <span style="background:#6b5a42"></span>
-        </span>
-        <span class="pal-label">Forêt</span>
-      </button>
-      <button type="button" data-pal="a2" aria-label="Palette Éditorial">
+      <button type="button" data-pal="a1" aria-label="Palette Éditorial">
         <span class="pal-chips" aria-hidden="true">
           <span style="background:#0a1f22"></span>
           <span style="background:#e6d5b4"></span>
@@ -48,7 +38,7 @@ import { site } from '../data/content';
         </span>
         <span class="pal-label">Éditorial</span>
       </button>
-      <button type="button" data-pal="a3" aria-label="Palette Marine">
+      <button type="button" data-pal="a2" aria-label="Palette Marine claire">
         <span class="pal-chips" aria-hidden="true">
           <span style="background:#ede2c8"></span>
           <span style="background:#14284a"></span>
@@ -56,9 +46,9 @@ import { site } from '../data/content';
           <span style="background:#c89548"></span>
           <span style="background:#6a5f42"></span>
         </span>
-        <span class="pal-label">Marine</span>
+        <span class="pal-label">Marine claire</span>
       </button>
-      <button type="button" data-pal="a4" aria-label="Palette Rouille">
+      <button type="button" data-pal="a3" aria-label="Palette Rouille claire">
         <span class="pal-chips" aria-hidden="true">
           <span style="background:#f0e5c8"></span>
           <span style="background:#1a1510"></span>
@@ -66,7 +56,27 @@ import { site } from '../data/content';
           <span style="background:#a8855a"></span>
           <span style="background:#6a5242"></span>
         </span>
-        <span class="pal-label">Rouille</span>
+        <span class="pal-label">Rouille claire</span>
+      </button>
+      <button type="button" data-pal="a4" aria-label="Palette Marine foncée">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#0a1528"></span>
+          <span style="background:#e8ecf2"></span>
+          <span style="background:#3b82f6"></span>
+          <span style="background:#fbbf24"></span>
+          <span style="background:#8596a8"></span>
+        </span>
+        <span class="pal-label">Marine foncée</span>
+      </button>
+      <button type="button" data-pal="a5" aria-label="Palette Rouille foncée">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#1a120a"></span>
+          <span style="background:#f0e5d0"></span>
+          <span style="background:#ea580c"></span>
+          <span style="background:#d4a574"></span>
+          <span style="background:#8a7560"></span>
+        </span>
+        <span class="pal-label">Rouille foncée</span>
       </button>
     </nav>
 
@@ -276,19 +286,6 @@ import { site } from '../data/content';
 
       <div class="palette-display" data-pal="a1">
         <p class="palette-intro">
-          <strong>Forêt</strong> — inspiration sous-bois humide (jay-wennington). Verts feutrés, sable, humus. Lecture sylvestre et posée.
-        </p>
-        <div class="swatches">
-          <div class="swatch"><div class="chip" style="background:#eae2c8"></div><span class="sw-name">Sable</span><span class="sw-hex">#EAE2C8</span></div>
-          <div class="swatch"><div class="chip" style="background:#1a241c"></div><span class="sw-name">Sapin</span><span class="sw-hex">#1A241C</span></div>
-          <div class="swatch"><div class="chip" style="background:#4d6149"></div><span class="sw-name">Mousse</span><span class="sw-hex">#4D6149</span></div>
-          <div class="swatch"><div class="chip" style="background:#8b9577"></div><span class="sw-name">Sauge</span><span class="sw-hex">#8B9577</span></div>
-          <div class="swatch"><div class="chip" style="background:#6b5a42"></div><span class="sw-name">Écorce</span><span class="sw-hex">#6B5A42</span></div>
-        </div>
-      </div>
-
-      <div class="palette-display" data-pal="a2">
-        <p class="palette-intro">
           <strong>Éditorial</strong> — palette issue de B (eau teal + bokeh ambré). Abysse profond, brume chaude, oxyde de cuivre. Mode sombre cinématographique appliqué à la structure cartographique.
         </p>
         <div class="swatches">
@@ -300,9 +297,9 @@ import { site } from '../data/content';
         </div>
       </div>
 
-      <div class="palette-display" data-pal="a3">
+      <div class="palette-display" data-pal="a2">
         <p class="palette-intro">
-          <strong>Marine</strong> — sable chaud, outremer profond, cobalt pétrole, or vieilli. Accent bleu franc qui porte l'autorité maritime, harmonisé avec le kraft.
+          <strong>Marine claire</strong> — sable chaud, outremer profond, cobalt pétrole, or vieilli. Accent bleu franc qui porte l'autorité maritime, sur fond kraft.
         </p>
         <div class="swatches">
           <div class="swatch"><div class="chip" style="background:#ede2c8"></div><span class="sw-name">Sable</span><span class="sw-hex">#EDE2C8</span></div>
@@ -313,9 +310,9 @@ import { site } from '../data/content';
         </div>
       </div>
 
-      <div class="palette-display" data-pal="a4">
+      <div class="palette-display" data-pal="a3">
         <p class="palette-intro">
-          <strong>Rouille</strong> — crème chaude, charbon profond, rouille terre cuite, tan chamois. Accents chauds qui évoquent le fer, la terre et le temps qui passe. Harmonie monochrome chaude.
+          <strong>Rouille claire</strong> — crème chaude, charbon profond, rouille terre cuite, tan chamois. Accents qui évoquent le fer, la terre et le temps, sur fond crème.
         </p>
         <div class="swatches">
           <div class="swatch"><div class="chip" style="background:#f0e5c8"></div><span class="sw-name">Crème</span><span class="sw-hex">#F0E5C8</span></div>
@@ -323,6 +320,32 @@ import { site } from '../data/content';
           <div class="swatch"><div class="chip" style="background:#b04a28"></div><span class="sw-name">Rouille</span><span class="sw-hex">#B04A28</span></div>
           <div class="swatch"><div class="chip" style="background:#a8855a"></div><span class="sw-name">Tan</span><span class="sw-hex">#A8855A</span></div>
           <div class="swatch"><div class="chip" style="background:#6a5242"></div><span class="sw-name">Pierre</span><span class="sw-hex">#6A5242</span></div>
+        </div>
+      </div>
+
+      <div class="palette-display" data-pal="a4">
+        <p class="palette-intro">
+          <strong>Marine foncée</strong> — variante nuit : abysse outremer comme fond, cream cool comme texte, cobalt vif et or doré éclatants. Le même ADN maritime renversé en mode sombre.
+        </p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#0a1528"></div><span class="sw-name">Abysse</span><span class="sw-hex">#0A1528</span></div>
+          <div class="swatch"><div class="chip" style="background:#e8ecf2"></div><span class="sw-name">Écume</span><span class="sw-hex">#E8ECF2</span></div>
+          <div class="swatch"><div class="chip" style="background:#3b82f6"></div><span class="sw-name">Cobalt vif</span><span class="sw-hex">#3B82F6</span></div>
+          <div class="swatch"><div class="chip" style="background:#fbbf24"></div><span class="sw-name">Or</span><span class="sw-hex">#FBBF24</span></div>
+          <div class="swatch"><div class="chip" style="background:#8596a8"></div><span class="sw-name">Brume</span><span class="sw-hex">#8596A8</span></div>
+        </div>
+      </div>
+
+      <div class="palette-display" data-pal="a5">
+        <p class="palette-intro">
+          <strong>Rouille foncée</strong> — variante forge : charbon d'atelier comme fond, cream brûlé comme texte, rouille vive et tan doré éclatants. Le même ADN terreux en mode sombre.
+        </p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#1a120a"></div><span class="sw-name">Charbon</span><span class="sw-hex">#1A120A</span></div>
+          <div class="swatch"><div class="chip" style="background:#f0e5d0"></div><span class="sw-name">Cendre</span><span class="sw-hex">#F0E5D0</span></div>
+          <div class="swatch"><div class="chip" style="background:#ea580c"></div><span class="sw-name">Rouille vive</span><span class="sw-hex">#EA580C</span></div>
+          <div class="swatch"><div class="chip" style="background:#d4a574"></div><span class="sw-name">Tan</span><span class="sw-hex">#D4A574</span></div>
+          <div class="swatch"><div class="chip" style="background:#8a7560"></div><span class="sw-name">Pierre</span><span class="sw-hex">#8A7560</span></div>
         </div>
       </div>
     </section>
@@ -370,15 +393,7 @@ import { site } from '../data/content';
 
   <style>
     :root[data-palette="a1"] {
-      --bg: #eae2c8;
-      --fg: #1a241c;
-      --fg-rgb: 26, 36, 28;
-      --accent: #4d6149;
-      --accent2: #8b9577;
-      --card: #f0e8cc;
-      --card-rgb: 240, 232, 204;
-    }
-    :root[data-palette="a2"] {
+      /* Éditorial — thème de B, dark teal + ambre */
       --bg: #0a1f22;
       --fg: #e6d5b4;
       --fg-rgb: 230, 213, 180;
@@ -387,7 +402,8 @@ import { site } from '../data/content';
       --card: #0e262b;
       --card-rgb: 14, 38, 43;
     }
-    :root[data-palette="a3"] {
+    :root[data-palette="a2"] {
+      /* Marine claire — sable + cobalt + or */
       --bg: #ede2c8;
       --fg: #14284a;
       --fg-rgb: 20, 40, 74;
@@ -396,7 +412,8 @@ import { site } from '../data/content';
       --card: #f3e8ce;
       --card-rgb: 243, 232, 206;
     }
-    :root[data-palette="a4"] {
+    :root[data-palette="a3"] {
+      /* Rouille claire — crème + charbon + rouille */
       --bg: #f0e5c8;
       --fg: #1a1510;
       --fg-rgb: 26, 21, 16;
@@ -405,9 +422,31 @@ import { site } from '../data/content';
       --card: #f5eace;
       --card-rgb: 245, 234, 206;
     }
+    :root[data-palette="a4"] {
+      /* Marine foncée — variante nuit, fond abysse */
+      --bg: #0a1528;
+      --fg: #e8ecf2;
+      --fg-rgb: 232, 236, 242;
+      --accent: #3b82f6;
+      --accent2: #fbbf24;
+      --card: #122040;
+      --card-rgb: 18, 32, 64;
+    }
+    :root[data-palette="a5"] {
+      /* Rouille foncée — variante forge, fond charbon */
+      --bg: #1a120a;
+      --fg: #f0e5d0;
+      --fg-rgb: 240, 229, 208;
+      --accent: #ea580c;
+      --accent2: #d4a574;
+      --card: #231710;
+      --card-rgb: 35, 23, 16;
+    }
 
-    /* Override pour le portrait en mode sombre (Éditorial) */
-    :root[data-palette="a2"] .p-frame img {
+    /* Overrides pour le portrait en mode sombre (Éditorial, Marine foncée, Rouille foncée) */
+    :root[data-palette="a1"] .p-frame img,
+    :root[data-palette="a4"] .p-frame img,
+    :root[data-palette="a5"] .p-frame img {
       mix-blend-mode: normal;
       filter: grayscale(1) contrast(1.12) brightness(1.05);
     }
@@ -917,7 +956,8 @@ import { site } from '../data/content';
     :root[data-palette="a1"] .palette-display[data-pal="a1"],
     :root[data-palette="a2"] .palette-display[data-pal="a2"],
     :root[data-palette="a3"] .palette-display[data-pal="a3"],
-    :root[data-palette="a4"] .palette-display[data-pal="a4"] {
+    :root[data-palette="a4"] .palette-display[data-pal="a4"],
+    :root[data-palette="a5"] .palette-display[data-pal="a5"] {
       display: block;
     }
     .palette-intro {

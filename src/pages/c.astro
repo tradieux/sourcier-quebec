@@ -28,7 +28,7 @@ import { site } from '../data/content';
   <div class="page">
     <nav class="palette-selector" aria-label="Choisir une palette de couleurs">
       <span class="sel-k">Palette</span>
-      <button type="button" data-pal="c1" aria-label="Palette Océan électrique">
+      <button type="button" data-pal="c1" aria-label="Palette Océan claire">
         <span class="pal-chips" aria-hidden="true">
           <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
           <span style="background:#0a0a0a"></span>
@@ -36,7 +36,37 @@ import { site } from '../data/content';
           <span style="background:#ef4444"></span>
           <span style="background:#6b6b6b"></span>
         </span>
-        <span class="pal-label">Océan</span>
+        <span class="pal-label">Océan claire</span>
+      </button>
+      <button type="button" data-pal="c4" aria-label="Palette Océan foncée">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#061018"></span>
+          <span style="background:#e6f0f4"></span>
+          <span style="background:#06b6d4"></span>
+          <span style="background:#f87171"></span>
+          <span style="background:#94a3b8"></span>
+        </span>
+        <span class="pal-label">Océan foncée</span>
+      </button>
+      <button type="button" data-pal="c3" aria-label="Palette Émeraude claire">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
+          <span style="background:#0a0a0a"></span>
+          <span style="background:#059669"></span>
+          <span style="background:#fb7185"></span>
+          <span style="background:#6b6b6b"></span>
+        </span>
+        <span class="pal-label">Émeraude claire</span>
+      </button>
+      <button type="button" data-pal="c5" aria-label="Palette Émeraude foncée">
+        <span class="pal-chips" aria-hidden="true">
+          <span style="background:#061810"></span>
+          <span style="background:#e8f0ea"></span>
+          <span style="background:#10b981"></span>
+          <span style="background:#fca5a5"></span>
+          <span style="background:#94a3a0"></span>
+        </span>
+        <span class="pal-label">Émeraude foncée</span>
       </button>
       <button type="button" data-pal="c2" aria-label="Palette Éditorial">
         <span class="pal-chips" aria-hidden="true">
@@ -47,26 +77,6 @@ import { site } from '../data/content';
           <span style="background:#6b8a8e"></span>
         </span>
         <span class="pal-label">Éditorial</span>
-      </button>
-      <button type="button" data-pal="c3" aria-label="Palette Émeraude">
-        <span class="pal-chips" aria-hidden="true">
-          <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
-          <span style="background:#0a0a0a"></span>
-          <span style="background:#059669"></span>
-          <span style="background:#fb7185"></span>
-          <span style="background:#6b6b6b"></span>
-        </span>
-        <span class="pal-label">Émeraude</span>
-      </button>
-      <button type="button" data-pal="c4" aria-label="Palette Outremer">
-        <span class="pal-chips" aria-hidden="true">
-          <span style="background:#ffffff;outline:1px solid #e5e5e5;outline-offset:-1px"></span>
-          <span style="background:#0a0a0a"></span>
-          <span style="background:#1e40af"></span>
-          <span style="background:#d97706"></span>
-          <span style="background:#6b6b6b"></span>
-        </span>
-        <span class="pal-label">Outremer</span>
       </button>
     </nav>
 
@@ -257,7 +267,7 @@ import { site } from '../data/content';
 
       <div class="palette-display" data-pal="c1">
         <p class="intro">
-          <strong>Océan électrique</strong> — cyan profond et corail vif. Référence directe à l'eau et à l'énergie, pure mais vibrante.
+          <strong>Océan claire</strong> — cyan profond et corail vif sur blanc pur. Référence directe à l'eau et à l'énergie, lecture claire et vibrante.
         </p>
         <div class="swatches">
           <div class="swatch"><div class="chip" style="background:#ffffff;border:1px solid #e5e5e5"></div><span class="sw-name">Blanc</span><span class="sw-hex">#FFFFFF</span></div>
@@ -265,6 +275,45 @@ import { site } from '../data/content';
           <div class="swatch"><div class="chip" style="background:#0891b2"></div><span class="sw-name">Cyan</span><span class="sw-hex">#0891B2</span></div>
           <div class="swatch"><div class="chip" style="background:#ef4444"></div><span class="sw-name">Corail</span><span class="sw-hex">#EF4444</span></div>
           <div class="swatch"><div class="chip" style="background:#6b6b6b"></div><span class="sw-name">Graphite</span><span class="sw-hex">#6B6B6B</span></div>
+        </div>
+      </div>
+
+      <div class="palette-display" data-pal="c4">
+        <p class="intro">
+          <strong>Océan foncée</strong> — variante nuit du même ADN cyan/corail, sur fond abysse profond. Cyan éclatant, corail adouci, atmosphère immersive.
+        </p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#061018"></div><span class="sw-name">Abysse</span><span class="sw-hex">#061018</span></div>
+          <div class="swatch"><div class="chip" style="background:#e6f0f4"></div><span class="sw-name">Écume</span><span class="sw-hex">#E6F0F4</span></div>
+          <div class="swatch"><div class="chip" style="background:#06b6d4"></div><span class="sw-name">Cyan vif</span><span class="sw-hex">#06B6D4</span></div>
+          <div class="swatch"><div class="chip" style="background:#f87171"></div><span class="sw-name">Corail</span><span class="sw-hex">#F87171</span></div>
+          <div class="swatch"><div class="chip" style="background:#94a3b8"></div><span class="sw-name">Brume</span><span class="sw-hex">#94A3B8</span></div>
+        </div>
+      </div>
+
+      <div class="palette-display" data-pal="c3">
+        <p class="intro">
+          <strong>Émeraude claire</strong> — émeraude franc et rose corail sur blanc pur. Duo frais et vivant, contraste végétal / charnel qui accompagne le blanc.
+        </p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#ffffff;border:1px solid #e5e5e5"></div><span class="sw-name">Blanc</span><span class="sw-hex">#FFFFFF</span></div>
+          <div class="swatch"><div class="chip" style="background:#0a0a0a"></div><span class="sw-name">Encre</span><span class="sw-hex">#0A0A0A</span></div>
+          <div class="swatch"><div class="chip" style="background:#059669"></div><span class="sw-name">Émeraude</span><span class="sw-hex">#059669</span></div>
+          <div class="swatch"><div class="chip" style="background:#fb7185"></div><span class="sw-name">Rose</span><span class="sw-hex">#FB7185</span></div>
+          <div class="swatch"><div class="chip" style="background:#6b6b6b"></div><span class="sw-name">Graphite</span><span class="sw-hex">#6B6B6B</span></div>
+        </div>
+      </div>
+
+      <div class="palette-display" data-pal="c5">
+        <p class="intro">
+          <strong>Émeraude foncée</strong> — variante sous-bois nocturne du même ADN émeraude/rose, sur fond forêt profonde. Vert éclatant, rose pâle, chaleur tamisée.
+        </p>
+        <div class="swatches">
+          <div class="swatch"><div class="chip" style="background:#061810"></div><span class="sw-name">Forêt</span><span class="sw-hex">#061810</span></div>
+          <div class="swatch"><div class="chip" style="background:#e8f0ea"></div><span class="sw-name">Mousse</span><span class="sw-hex">#E8F0EA</span></div>
+          <div class="swatch"><div class="chip" style="background:#10b981"></div><span class="sw-name">Émeraude vif</span><span class="sw-hex">#10B981</span></div>
+          <div class="swatch"><div class="chip" style="background:#fca5a5"></div><span class="sw-name">Rose pâle</span><span class="sw-hex">#FCA5A5</span></div>
+          <div class="swatch"><div class="chip" style="background:#94a3a0"></div><span class="sw-name">Sauge</span><span class="sw-hex">#94A3A0</span></div>
         </div>
       </div>
 
@@ -278,32 +327,6 @@ import { site } from '../data/content';
           <div class="swatch"><div class="chip" style="background:#2a6a70"></div><span class="sw-name">Oxyde</span><span class="sw-hex">#2A6A70</span></div>
           <div class="swatch"><div class="chip" style="background:#d9923d"></div><span class="sw-name">Ambre</span><span class="sw-hex">#D9923D</span></div>
           <div class="swatch"><div class="chip" style="background:#6b8a8e"></div><span class="sw-name">Brouillard</span><span class="sw-hex">#6B8A8E</span></div>
-        </div>
-      </div>
-
-      <div class="palette-display" data-pal="c3">
-        <p class="intro">
-          <strong>Émeraude</strong> — émeraude franc et rose corail. Duo frais et vivant, avec un contraste végétal/charnel qui accompagne naturellement le blanc pur.
-        </p>
-        <div class="swatches">
-          <div class="swatch"><div class="chip" style="background:#ffffff;border:1px solid #e5e5e5"></div><span class="sw-name">Blanc</span><span class="sw-hex">#FFFFFF</span></div>
-          <div class="swatch"><div class="chip" style="background:#0a0a0a"></div><span class="sw-name">Encre</span><span class="sw-hex">#0A0A0A</span></div>
-          <div class="swatch"><div class="chip" style="background:#059669"></div><span class="sw-name">Émeraude</span><span class="sw-hex">#059669</span></div>
-          <div class="swatch"><div class="chip" style="background:#fb7185"></div><span class="sw-name">Rose</span><span class="sw-hex">#FB7185</span></div>
-          <div class="swatch"><div class="chip" style="background:#6b6b6b"></div><span class="sw-name">Graphite</span><span class="sw-hex">#6B6B6B</span></div>
-        </div>
-      </div>
-
-      <div class="palette-display" data-pal="c4">
-        <p class="intro">
-          <strong>Outremer</strong> — bleu outremer profond et saffron chaud. Accent classique magazine, harmonieux et chaleureux, contraste cool/warm équilibré.
-        </p>
-        <div class="swatches">
-          <div class="swatch"><div class="chip" style="background:#ffffff;border:1px solid #e5e5e5"></div><span class="sw-name">Blanc</span><span class="sw-hex">#FFFFFF</span></div>
-          <div class="swatch"><div class="chip" style="background:#0a0a0a"></div><span class="sw-name">Encre</span><span class="sw-hex">#0A0A0A</span></div>
-          <div class="swatch"><div class="chip" style="background:#1e40af"></div><span class="sw-name">Outremer</span><span class="sw-hex">#1E40AF</span></div>
-          <div class="swatch"><div class="chip" style="background:#d97706"></div><span class="sw-name">Saffron</span><span class="sw-hex">#D97706</span></div>
-          <div class="swatch"><div class="chip" style="background:#6b6b6b"></div><span class="sw-name">Graphite</span><span class="sw-hex">#6B6B6B</span></div>
         </div>
       </div>
     </section>
@@ -358,6 +381,7 @@ import { site } from '../data/content';
 
   <style>
     :root[data-palette="c1"] {
+      /* Océan claire — cyan + corail sur blanc */
       --bg: #ffffff;
       --fg: #0a0a0a;
       --fg-rgb: 10, 10, 10;
@@ -368,6 +392,7 @@ import { site } from '../data/content';
       --lead-bg: #fafafa;
     }
     :root[data-palette="c2"] {
+      /* Éditorial — thème de B, dark teal + ambre */
       --bg: #0a1f22;
       --fg: #e6d5b4;
       --fg-rgb: 230, 213, 180;
@@ -378,6 +403,7 @@ import { site } from '../data/content';
       --lead-bg: #0e262b;
     }
     :root[data-palette="c3"] {
+      /* Émeraude claire — émeraude + rose sur blanc */
       --bg: #ffffff;
       --fg: #0a0a0a;
       --fg-rgb: 10, 10, 10;
@@ -388,14 +414,26 @@ import { site } from '../data/content';
       --lead-bg: #fafafa;
     }
     :root[data-palette="c4"] {
-      --bg: #ffffff;
-      --fg: #0a0a0a;
-      --fg-rgb: 10, 10, 10;
-      --accent: #1e40af;
-      --accent2: #d97706;
-      --muted: #6b6b6b;
-      --border: #e5e5e5;
-      --lead-bg: #fafafa;
+      /* Océan foncée — variante nuit, fond abysse */
+      --bg: #061018;
+      --fg: #e6f0f4;
+      --fg-rgb: 230, 240, 244;
+      --accent: #06b6d4;
+      --accent2: #f87171;
+      --muted: #94a3b8;
+      --border: rgba(230, 240, 244, 0.15);
+      --lead-bg: #0a1821;
+    }
+    :root[data-palette="c5"] {
+      /* Émeraude foncée — variante sous-bois, fond forêt */
+      --bg: #061810;
+      --fg: #e8f0ea;
+      --fg-rgb: 232, 240, 234;
+      --accent: #10b981;
+      --accent2: #fca5a5;
+      --muted: #94a3a0;
+      --border: rgba(232, 240, 234, 0.15);
+      --lead-bg: #0a1f15;
     }
 
     :global(html, body) {
@@ -922,12 +960,15 @@ import { site } from '../data/content';
     :root[data-palette="c1"] .palette-display[data-pal="c1"],
     :root[data-palette="c2"] .palette-display[data-pal="c2"],
     :root[data-palette="c3"] .palette-display[data-pal="c3"],
-    :root[data-palette="c4"] .palette-display[data-pal="c4"] {
+    :root[data-palette="c4"] .palette-display[data-pal="c4"],
+    :root[data-palette="c5"] .palette-display[data-pal="c5"] {
       display: block;
     }
 
-    /* Override pour le portrait en mode sombre (Éditorial) */
-    :root[data-palette="c2"] .portrait-col img {
+    /* Overrides pour le portrait en mode sombre (Éditorial, Océan foncée, Émeraude foncée) */
+    :root[data-palette="c2"] .portrait-col img,
+    :root[data-palette="c4"] .portrait-col img,
+    :root[data-palette="c5"] .portrait-col img {
       filter: grayscale(1) contrast(1.1) brightness(1.1);
     }
     .palette-display .intro {
