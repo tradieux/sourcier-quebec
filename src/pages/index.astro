@@ -375,11 +375,16 @@ const romans = ['I', 'II', 'III'];
     :global(html, body) {
       margin: 0;
       padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
       background: var(--bg);
       color: var(--fg);
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
       transition: background 350ms ease, color 350ms ease;
     }
     :global(section) {
@@ -457,11 +462,14 @@ const romans = ['I', 'II', 'III'];
     }
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3.5rem, 12vw, 10rem);
-      line-height: 0.88;
+      font-size: clamp(2.6rem, 11vw, 10rem);
+      line-height: 0.9;
       letter-spacing: -0.03em;
       margin: 0 0 2rem;
       font-weight: 400;
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
     }
     .hero h1 em {
       font-style: italic;
