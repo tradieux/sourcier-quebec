@@ -1,0 +1,32 @@
+forfaits:
+  - id: residentiel
+    nom: Résidentiel
+    prix: 250
+    surface: "Jusqu'à 5 000 m²"
+    cible: Idéal pour les projets de puits artésiens domestiques.
+    inclusions:
+      - Détection d'une veine d'eau optimale
+      - Estimation de la profondeur et du débit
+      - Pose d'un repère sur le terrain
+
+  - id: agricole
+    nom: Agricole / Grand Terrain
+    prix: 350
+    surface: "Jusqu'à 10 000 m²"
+    cible: Analyse complète pour besoins en débit élevé.
+    inclusions:
+      - Identification de plusieurs points de forage potentiels
+      - Estimation de la profondeur et du débit
+      - Pose des repères sur le terrain
+
+  - id: municipal
+    nom: Municipal
+    prix: 550
+    surface: Projet dédié
+    cible: >-
+      Idéal pour les projets d'approvisionnement en eau potable d'une
+      municipalité.
+    inclusions:
+      - Détection d'une veine d'eau optimale
+      - Estimation de la profondeur et du débit
+      - Pose d'un repère sur le terrain

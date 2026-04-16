@@ -1,3 +1,5 @@
 - [Projet Sourcier Québec](project_sourcier_quebec.md) — site vitrine pour Thomas, sourcier à La Pocatière (QC), contenu défini, client néophyte à former à l'édition
 - [Profil Thierry](user_thierry.md) — développeur du site, instructions directes, gère le déploiement Docker/VPS
 - [Déploiement Docker/Traefik](reference_deploy.md) — `docker compose up -d --build` sur VPS OVH, réseau n8n_default, pas de remote Git
+- [Checklist transfert Thomas](project_transfert_thomas.md) — GitHub, Cloudflare, DecapBridge, Formspree, domaine → tout sous sourcierquebec@gmail.com
+- [Setup DecapBridge](project_decapbridge_setup.md) — config backend trouvée, en attente du site ID pour finaliser /admin

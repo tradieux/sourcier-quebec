@@ -1,0 +1,168 @@
+# ─────────────────────────────────────────────
+# Decap CMS — Sourcier Québec
+# ─────────────────────────────────────────────
+# Backend actuel : proxy local (npx decap-server)
+# Pour la production : remplacer par DecapBridge
+# ─────────────────────────────────────────────
+
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+
+locale: fr
+media_folder: public/images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ── Informations générales ──────────────────
+  - name: general
+    label: "Informations générales"
+    files:
+      - name: general
+        label: "Site & Héro"
+        file: src/content/general.yml
+        fields:
+          - { label: "Nom du site", name: brand, widget: string }
+          - { label: "Sous-titre", name: baseline, widget: string }
+          - { label: "URL Facebook", name: facebookUrl, widget: string }
+          - label: "Clause de confidentialité (formulaire)"
+            name: confidentialiteForm
+            widget: text
+          - label: "Section héro"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Slogan", name: slogan, widget: string }
+              - { label: "Accroche", name: accroche, widget: text }
+              - { label: "Texte du bouton", name: ctaLabel, widget: string }
+          - label: "Mentions légales"
+            name: legal
+            widget: object
+            fields:
+              - { label: "Clause de non-garantie", name: clause, widget: text }
+
+  # ── Piliers ─────────────────────────────────
+  - name: piliers
+    label: "Les 3 piliers"
+    files:
+      - name: piliers
+        label: "Piliers de la démarche"
+        file: src/content/piliers.yml
+        fields:
+          - label: "Piliers"
+            name: piliers
+            widget: list
+            max: 3
+            min: 3
+            fields:
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Description", name: texte, widget: text }
+
+  # ── À propos ────────────────────────────────
+  - name: apropos
+    label: "À propos"
+    files:
+      - name: apropos
+        label: "Présentation de Thomas"
+        file: src/content/apropos.yml
+        fields:
+          - { label: "Introduction", name: intro, widget: text }
+          - { label: "Parcours", name: parcours, widget: text }
+          - { label: "Méthode de travail", name: methode, widget: text }
+          - label: "Points forts"
+            name: points
+            widget: list
+            fields:
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Description", name: texte, widget: text }
+
+  # ── Forfaits ────────────────────────────────
+  - name: forfaits
+    label: "Forfaits & Tarifs"
+    files:
+      - name: forfaits
+        label: "Grille tarifaire"
+        file: src/content/forfaits.yml
+        fields:
+          - label: "Forfaits"
+            name: forfaits
+            widget: list
+            fields:
+              - { label: "Identifiant", name: id, widget: hidden }
+              - { label: "Nom du forfait", name: nom, widget: string }
+              - { label: "Prix ($)", name: prix, widget: number, value_type: int }
+              - { label: "Surface couverte", name: surface, widget: string }
+              - { label: "Public cible", name: cible, widget: text }
+              - label: "Inclusions"
+                name: inclusions
+                widget: list
+                field: { label: "Inclusion", name: item, widget: string }
+
+  # ── Zone d'intervention ─────────────────────
+  - name: zone
+    label: "Zone d'intervention"
+    files:
+      - name: zone
+        label: "Territoire desservi"
+        file: src/content/zone.yml
+        fields:
+          - { label: "Ville de base", name: base, widget: string }
+          - { label: "Coordonnées GPS", name: coords, widget: string }
+          - label: "Régions desservies"
+            name: regions
+            widget: list
+            field: { label: "Région", name: region, widget: string }
+          - { label: "Note déplacement", name: autre, widget: string }
+          - { label: "Rayon inclus", name: rayonInclus, widget: string }
+          - { label: "Tarif kilométrique", name: tarifKm, widget: string }
+          - { label: "Note sur les prix", name: note, widget: text }
+
+  # ── FAQ ─────────────────────────────────────
+  - name: faq
+    label: "Questions fréquentes"
+    files:
+      - name: faq
+        label: "FAQ"
+        file: src/content/faq.yml
+        fields:
+          - label: "Questions"
+            name: faq
+            widget: list
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Réponse", name: reponse, widget: text }
+
+  # ── Témoignages ─────────────────────────────
+  - name: temoignages
+    label: "Témoignages"
+    files:
+      - name: temoignages
+        label: "Avis clients"
+        file: src/content/temoignages.yml
+        fields:
+          - { label: "Texte d'introduction", name: intro, widget: text }
+          - label: "Témoignages"
+            name: temoignages
+            widget: list
+            fields:
+              - { label: "Nom / type de client", name: auteur, widget: string }
+              - { label: "Témoignage", name: texte, widget: text }
+
+  # ── Coordonnées ─────────────────────────────
+  - name: contact
+    label: "Coordonnées"
+    files:
+      - name: contact
+        label: "Informations de contact"
+        file: src/content/contact.yml
+        fields:
+          - { label: "Adresse", name: adresse, widget: string }
+          - { label: "Téléphone (affiché)", name: tel, widget: string }
+          - { label: "Téléphone (lien tel:)", name: telRaw, widget: string }
+          - { label: "Courriel", name: email, widget: string }
+          - { label: "Horaires", name: horaires, widget: string }
+          - { label: "Introduction du formulaire", name: formIntro, widget: text }
