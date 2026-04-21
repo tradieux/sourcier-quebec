@@ -12,12 +12,6 @@ const romans = ['I', 'II', 'III'];
     <script is:inline>
       document.documentElement.dataset.palette = 'editorial';
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
-    />
   </Fragment>
 
   <SiteHeader />
@@ -172,7 +166,11 @@ const romans = ['I', 'II', 'III'];
         novalidate
       >
         <input type="hidden" name="_subject" value="Nouvelle demande de soumission — Sourcier Québec" />
-        <p class="form-privacy">{site.meta.confidentialiteForm}</p>
+        <p class="form-privacy">
+          {site.meta.confidentialiteForm}
+          {' '}
+          <a href="/confidentialite/">Lire la politique de confidentialité →</a>
+        </p>
 
         <fieldset>
           <legend>Identification du demandeur</legend>
@@ -286,6 +284,19 @@ const romans = ['I', 'II', 'III'];
           </small>
         </fieldset>
 
+        <fieldset class="consent">
+          <legend class="sr-only">Consentement</legend>
+          <label class="consent-check">
+            <input type="checkbox" name="consentement" value="oui" required />
+            <span>
+              J'ai lu et j'accepte la <a href="/confidentialite/">politique de
+              confidentialité</a>. Je consens à ce que Sourcier Québec recueille
+              et traite les renseignements ci-dessus pour préparer ma soumission,
+              incluant leur transmission par Formspree (États-Unis). *
+            </span>
+          </label>
+        </fieldset>
+
         <button type="submit">Envoyer la demande →</button>
         <div class="form-success" hidden>
           <p>Formulaire envoyé</p>
@@ -310,6 +321,15 @@ const romans = ['I', 'II', 'III'];
         // Soumission AJAX via Formspree
         form.addEventListener('submit', function (e) {
           e.preventDefault();
+
+          // Validation du consentement Loi 25 (form en novalidate)
+          var consent = form.querySelector('input[name="consentement"]');
+          if (consent && !consent.checked) {
+            alert('Vous devez accepter la politique de confidentialité pour envoyer la demande.');
+            consent.focus();
+            return;
+          }
+
           var btn = form.querySelector('button[type="submit"]');
           var originalText = btn.textContent;
           btn.disabled = true;
@@ -398,6 +418,7 @@ const romans = ['I', 'II', 'III'];
         <a href="#forfaits">Forfaits</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+        <a href="/confidentialite/">Confidentialité</a>
         <a href={site.meta.facebookUrl} target="_blank" rel="noopener noreferrer">Facebook ↗</a>
       </div>
     </div>
@@ -1110,6 +1131,45 @@ const romans = ['I', 'II', 'III'];
       color: rgba(var(--fg-rgb), 0.72);
       line-height: 1.55;
       margin-top: 0.25rem;
+    }
+
+    /* Consentement Loi 25 */
+    .form .consent {
+      border-top: 1px solid rgba(var(--fg-rgb), 0.18);
+      padding-top: 1.25rem;
+    }
+    .consent-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(var(--fg-rgb), 0.88);
+    }
+    .consent-check input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 1.05rem;
+      height: 1.05rem;
+      margin: 0.2rem 0 0;
+      flex-shrink: 0;
+    }
+    .consent-check a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .consent-check a:hover { color: var(--accent-hover); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
     .form input[type="file"] {
       font-family: 'Inter', sans-serif;

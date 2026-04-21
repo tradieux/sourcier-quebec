@@ -22,6 +22,24 @@ export const site = {
     confidentialiteForm: general.confidentialiteForm as string,
   },
 
+  confidentialite: general.confidentialite as {
+    dateMaj: string;
+    entree: string;
+    responsable: { titre: string; texte: string };
+    collecte: { titre: string; intro: string; items: string[] };
+    finalites: { titre: string; items: string[] };
+    basesLegales: { titre: string; texte: string };
+    partage: { titre: string; intro: string; items: string[]; note: string };
+    transfertHorsQuebec: { titre: string; texte: string };
+    conservation: { titre: string; texte: string };
+    securite: { titre: string; texte: string };
+    droits: { titre: string; intro: string; items: string[]; exercer: string };
+    cookies: { titre: string; texte: string };
+    incidents: { titre: string; texte: string };
+    cai: { titre: string; texte: string; lien: string };
+    modifications: string;
+  },
+
   hero: {
     slogan: general.hero.slogan as string,
     accroche: general.hero.accroche as string,

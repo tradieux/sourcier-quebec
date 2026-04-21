@@ -1,0 +1,262 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { site } from '../data/content';
+import '../styles/palettes.css';
+
+const p = site.confidentialite;
+---
+<Base
+  title={`Politique de confidentialité — ${site.meta.brand}`}
+  description="Politique de confidentialité de Sourcier Québec : renseignements recueillis, finalités, durée de conservation et droits des personnes selon la Loi 25."
+>
+  <Fragment slot="head">
+    <script is:inline>
+      document.documentElement.dataset.palette = 'editorial';
+    </script>
+  </Fragment>
+
+  <SiteHeader />
+
+  <main class="legal">
+    <header class="legal-hero">
+      <p class="kicker">Confidentialité</p>
+      <h1>Politique de <em>confidentialité</em>.</h1>
+      <p class="maj">Dernière mise à jour : {p.dateMaj}</p>
+    </header>
+
+    <article class="legal-body">
+      <p class="lede">{p.entree}</p>
+
+      <section>
+        <h2>{p.responsable.titre}</h2>
+        <p>{p.responsable.texte}</p>
+        <ul class="coord">
+          <li>Thomas Hiessler — Sourcier Québec</li>
+          <li>{site.contact.adresse}</li>
+          <li><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
+          <li><a href={`tel:${site.contact.telRaw}`}>{site.contact.tel}</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>{p.collecte.titre}</h2>
+        <p>{p.collecte.intro}</p>
+        <ul>
+          {p.collecte.items.map((i) => <li>{i}</li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2>{p.finalites.titre}</h2>
+        <ul>
+          {p.finalites.items.map((i) => <li>{i}</li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2>{p.basesLegales.titre}</h2>
+        <p>{p.basesLegales.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.partage.titre}</h2>
+        <p>{p.partage.intro}</p>
+        <ul>
+          {p.partage.items.map((i) => <li>{i}</li>)}
+        </ul>
+        <p class="note">{p.partage.note}</p>
+      </section>
+
+      <section>
+        <h2>{p.transfertHorsQuebec.titre}</h2>
+        <p>{p.transfertHorsQuebec.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.conservation.titre}</h2>
+        <p>{p.conservation.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.securite.titre}</h2>
+        <p>{p.securite.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.droits.titre}</h2>
+        <p>{p.droits.intro}</p>
+        <ul>
+          {p.droits.items.map((i) => <li>{i}</li>)}
+        </ul>
+        <p>{p.droits.exercer}</p>
+      </section>
+
+      <section>
+        <h2>{p.cookies.titre}</h2>
+        <p>{p.cookies.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.incidents.titre}</h2>
+        <p>{p.incidents.texte}</p>
+      </section>
+
+      <section>
+        <h2>{p.cai.titre}</h2>
+        <p>
+          {p.cai.texte}
+          {' '}
+          <a href={p.cai.lien} target="_blank" rel="noopener noreferrer">
+            cai.gouv.qc.ca ↗
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>Modifications</h2>
+        <p>{p.modifications}</p>
+      </section>
+
+      <p class="back"><a href="/">← Retour à l'accueil</a></p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="f-copy">
+      <span>© 2026 Sourcier Québec</span>
+      <span>Thomas Hiessler · La Pocatière, Québec</span>
+      <a href="/confidentialite/">Confidentialité</a>
+    </div>
+  </footer>
+
+  <style>
+    :global(*, *::before, *::after) { box-sizing: border-box; }
+    :global(html, body) {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .legal {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vh, 6rem) clamp(1.25rem, 6vw, 2.5rem) 6rem;
+    }
+
+    .legal-hero {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
+    }
+    .kicker {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+    .legal-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+    }
+    .legal-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .maj {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .legal-body .lede {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: rgba(var(--fg-rgb), 0.92);
+      margin: 0 0 3rem;
+    }
+
+    .legal-body section {
+      margin: 0 0 2.75rem;
+    }
+    .legal-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      font-weight: 500;
+      margin: 0 0 1rem;
+      color: var(--fg);
+    }
+    .legal-body p,
+    .legal-body li {
+      line-height: 1.7;
+      font-size: 0.98rem;
+      color: rgba(var(--fg-rgb), 0.85);
+    }
+    .legal-body p { margin: 0 0 1rem; }
+    .legal-body ul {
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+    .legal-body li { margin: 0.3rem 0; }
+    .legal-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .legal-body a:hover { color: var(--accent-hover); }
+
+    .coord {
+      list-style: none;
+      padding: 1rem 1.25rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin: 0 0 1rem;
+    }
+    .coord li { margin: 0.2rem 0; }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .back {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Footer */
+    .footer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem clamp(1.25rem, 6vw, 4rem);
+      border-top: 1px solid var(--border);
+    }
+    .f-copy {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .f-copy a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .f-copy a:hover { color: var(--accent); }
+  </style>
+</Base>

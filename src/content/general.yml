@@ -2,9 +2,146 @@ brand: Sourcier Québec
 baseline: Sourcier professionnel au Québec
 facebookUrl: https://www.facebook.com/profile.php?id=61573288202003
 confidentialiteForm: >-
-  Les informations recueillies dans ce formulaire sont strictement
-  confidentielles et servent uniquement à l'établissement de votre offre de
-  service et à la préparation de l'intervention technique.
+  Les renseignements recueillis servent uniquement à préparer votre
+  soumission et l'intervention sur le terrain. Le formulaire est transmis
+  via Formspree (serveurs aux États-Unis), puis stocké dans la boîte
+  courriel du sourcier. Conservation : jusqu'à 3 ans après la fin du
+  mandat, puis destruction. Vos droits d'accès, de rectification et de
+  retrait sont détaillés dans la politique de confidentialité.
+
+confidentialite:
+  dateMaj: "21 avril 2026"
+  entree: >-
+    Sourcier Québec (Thomas Hiessler, entreprise individuelle, La Pocatière,
+    Québec) traite vos renseignements personnels en conformité avec la
+    Loi sur la protection des renseignements personnels dans le secteur
+    privé (Québec, c. P-39.1), telle que modifiée par la Loi 25.
+  responsable:
+    titre: Responsable de la protection des renseignements personnels
+    texte: >-
+      Thomas Hiessler assume personnellement le rôle de responsable de la
+      protection des renseignements personnels au sein de Sourcier Québec.
+      Pour toute question, demande d'accès, de rectification ou de retrait
+      de consentement, vous pouvez le joindre aux coordonnées ci-dessous.
+  collecte:
+    titre: Renseignements recueillis
+    intro: >-
+      Lorsque vous remplissez le formulaire de demande de soumission,
+      Sourcier Québec recueille les renseignements suivants :
+    items:
+      - Nom complet et, le cas échéant, nom de l'entreprise ou de l'organisme
+      - Adresse courriel et numéro de téléphone
+      - Adresse de résidence du demandeur
+      - Adresse ou coordonnées du lieu de recherche (lot, GPS)
+      - Nature technique du projet (raison, surface, débit souhaité)
+      - État d'avancement (date de forage, foreur, permis municipal)
+  finalites:
+    titre: Finalités de l'utilisation
+    items:
+      - Préparer une offre de service personnalisée
+      - Planifier et exécuter l'intervention technique sur le terrain
+      - Assurer le suivi après intervention et répondre à vos questions
+      - Respecter nos obligations légales, fiscales et comptables
+  basesLegales:
+    titre: Fondement du traitement
+    texte: >-
+      Le traitement repose sur votre consentement libre, éclairé et manifeste,
+      donné au moment de l'envoi du formulaire, ainsi que sur l'exécution du
+      contrat de service qui peut en découler.
+  partage:
+    titre: Communication à des tiers
+    intro: >-
+      Vos renseignements ne sont jamais vendus ni loués. Ils sont
+      communiqués uniquement aux prestataires techniques suivants, strictement
+      nécessaires au fonctionnement du service :
+    items:
+      - >-
+        Formspree (Formspree Inc., États-Unis) — traitement et transmission
+        du formulaire de contact. Formspree agit à titre de sous-traitant et
+        s'engage contractuellement à protéger les données.
+      - >-
+        Google Workspace / Gmail (Google LLC, États-Unis) — réception et
+        conservation des courriels échangés avec Sourcier Québec.
+      - >-
+        Cloudflare (Cloudflare Inc., États-Unis) — protection DNS du domaine
+        sourcierquebec.ca.
+    note: >-
+      Sourcier Québec peut également être tenu de communiquer vos
+      renseignements à une autorité publique compétente lorsque la loi
+      l'exige (p. ex. autorité fiscale, ordre professionnel, tribunal).
+  transfertHorsQuebec:
+    titre: Transfert hors du Québec
+    texte: >-
+      Les prestataires mentionnés ci-dessus hébergent leurs serveurs
+      principalement aux États-Unis. Avant de recourir à ces services,
+      Sourcier Québec a procédé à une évaluation des facteurs relatifs à la
+      vie privée et jugé que les protections offertes (conditions
+      contractuelles, mesures techniques, absence de renseignements
+      sensibles) sont raisonnablement équivalentes à celles prévues par le
+      droit québécois. En transmettant le formulaire, vous êtes informé(e)
+      de ce transfert et vous y consentez.
+  conservation:
+    titre: Durée de conservation
+    texte: >-
+      Vos renseignements sont conservés pendant toute la durée nécessaire à
+      l'exécution du mandat, puis jusqu'à trois (3) ans après la fin du
+      mandat à des fins de suivi client, de garantie et d'obligations
+      comptables. Les demandes n'ayant pas abouti à un mandat sont
+      conservées au maximum douze (12) mois. Au-delà, les données sont
+      détruites ou anonymisées.
+  securite:
+    titre: Mesures de sécurité
+    texte: >-
+      Sourcier Québec prend les précautions raisonnables pour protéger vos
+      renseignements contre la perte, l'accès non autorisé, la modification
+      et la divulgation : comptes protégés par mots de passe robustes et
+      authentification à deux facteurs, chiffrement des communications
+      (HTTPS, TLS), accès limité au seul sourcier, destruction sécurisée
+      des supports en fin de vie.
+  droits:
+    titre: Vos droits
+    intro: >-
+      Conformément à la Loi 25, vous disposez en tout temps des droits
+      suivants :
+    items:
+      - Droit d'accès à vos renseignements personnels
+      - Droit de rectification des renseignements inexacts ou incomplets
+      - Droit de retirer votre consentement et de demander la suppression
+      - Droit à la portabilité (recevoir vos données dans un format courant)
+      - Droit à la désindexation d'un lien qui vous concerne
+      - Droit de formuler une plainte auprès de Sourcier Québec, puis, le
+        cas échéant, auprès de la Commission d'accès à l'information du Québec
+    exercer: >-
+      Pour exercer ces droits, écrivez à sourcierquebec@gmail.com avec la
+      mention « Loi 25 » en objet. Une réponse vous sera fournie dans un
+      délai maximal de 30 jours.
+  cookies:
+    titre: Témoins (cookies) et traceurs
+    texte: >-
+      Le site sourcierquebec.ca ne dépose aucun témoin publicitaire, aucun
+      traceur d'analytique et n'utilise pas d'outils de profilage ou de
+      géolocalisation. Seuls des témoins strictement techniques peuvent
+      être utilisés par l'hébergeur (Cloudflare) pour assurer la sécurité
+      et la disponibilité du site ; ceux-ci ne servent pas à vous identifier.
+  incidents:
+    titre: Incidents de confidentialité
+    texte: >-
+      En cas d'incident de confidentialité présentant un risque de
+      préjudice sérieux, Sourcier Québec informera dans les meilleurs
+      délais la Commission d'accès à l'information du Québec ainsi que les
+      personnes concernées, conformément à la Loi 25. Un registre interne
+      des incidents est tenu.
+  cai:
+    titre: Commission d'accès à l'information
+    texte: >-
+      Si vous estimez que vos droits n'ont pas été respectés, vous pouvez
+      déposer une plainte auprès de la Commission d'accès à l'information
+      du Québec.
+    lien: https://www.cai.gouv.qc.ca
+  modifications: >-
+    La présente politique peut être mise à jour pour refléter des évolutions
+    légales ou techniques. La date de dernière mise à jour figure en tête
+    de page.
 
 hero:
   slogan: "L'expertise de l'eau au service de votre terrain"
