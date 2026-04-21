@@ -144,7 +144,8 @@ confidentialite:
     de page.
 
 hero:
-  slogan: "L'expertise de l'eau au service de votre terrain"
+  sloganHaut: "Sous vos pieds,"
+  sloganBas: "l'eau attend."
   accroche: >-
     Localisation précise de veines d'eau pour vos projets de forage
     résidentiels, agricoles et municipaux.

@@ -41,7 +41,8 @@ export const site = {
   },
 
   hero: {
-    slogan: general.hero.slogan as string,
+    sloganHaut: general.hero.sloganHaut as string,
+    sloganBas: general.hero.sloganBas as string,
     accroche: general.hero.accroche as string,
     cta: { label: general.hero.ctaLabel as string, href: '#contact' },
   },

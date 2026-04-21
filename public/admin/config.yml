@@ -56,7 +56,14 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: "Slogan", name: slogan, widget: string }
+              - label: "Slogan — ligne 1"
+                name: sloganHaut
+                widget: string
+                hint: "Première ligne du grand titre d'accueil (ex. « Sous vos pieds, »)."
+              - label: "Slogan — ligne 2 (affichée en italique)"
+                name: sloganBas
+                widget: string
+                hint: "Seconde ligne du grand titre, mise en évidence en italique (ex. « l'eau attend. »)."
               - { label: "Accroche", name: accroche, widget: text }
               - { label: "Texte du bouton", name: ctaLabel, widget: string }
           - label: "Mentions légales"
