@@ -7,7 +7,7 @@ forfaits:
     inclusions:
       - Détection d'une veine d'eau optimale
       - Estimation de la profondeur et du débit
-      - Pose d'un repère sur le terrain
+      - Pose d'un repère sur le terrain et production d'un rapport détaillé
   - id: agricole
     nom: Agricole / Grand Terrain
     prix: 300
@@ -16,7 +16,7 @@ forfaits:
     inclusions:
       - Identification de plusieurs points de forage potentiels
       - Estimation de la profondeur et du débit
-      - Pose des repères sur le terrain
+      - Pose des repères sur le terrain et production d'un rapport détaillé
   - id: municipal
     nom: Municipal
     prix: 500
